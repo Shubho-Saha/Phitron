@@ -1,0 +1,3 @@
+func adress stored at a: 0xfb2070
+func address of a: 0x61fedc
+main> stack ad of a: 0
