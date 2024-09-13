@@ -5,12 +5,12 @@ vector<int> adlist[100];
 int level[100];
 bool visited[100];
 
-void bfs(int src)
+void bfs()
 {
     queue<int> q;
-    q.push(src);
-    visited[src] = true;
-    level[src] = 0;
+    q.push(0);
+    visited[0] = true;
+    level[0] = 0;
 
     while(!q.empty())
     {
@@ -34,24 +34,27 @@ int main()
 
     while(e--)
     {
-        int a,b;
+        int a, b;
         cin>>a>>b;
         adlist[a].push_back(b);
         adlist[b].push_back(a);
-
     }
 
-    int q;
-    cin>>q;
-    while(q--)
-    {
-        int src, des;
-        cin>>src>>des;
-        memset(level, -1, sizeof(level));
-        memset(visited, false, sizeof(visited));
-        bfs(src);
-        cout<<level[des]<<endl;
+    int lvl;
+    cin>>lvl;
+    memset(level, -1, sizeof(level));
+    memset(visited, false, sizeof(visited));
+    bfs();
 
+    vector<int> levelNodes;
+    for(int i=0; i<n; i++) {
+        if (level[i] == lvl) {
+            levelNodes.push_back(i);
+        }
+    }
+    reverse(levelNodes.begin(), levelNodes.end());
+    for(int x: levelNodes) {
+        cout<<x<<" ";
     }
 
     return 0;
