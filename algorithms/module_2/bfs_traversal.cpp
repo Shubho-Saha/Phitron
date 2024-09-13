@@ -2,7 +2,7 @@
 using namespace std;
 
 vector<int> adList[1005];
-int visited[1005];
+bool visited[1005];
 
 void bfs(int src)
 {

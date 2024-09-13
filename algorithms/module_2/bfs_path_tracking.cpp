@@ -2,7 +2,7 @@
 using namespace std;
 
 vector<int> adlist[100];
-int visited[100];
+bool visited[100];
 int parent[100];
 int level[100];
 
