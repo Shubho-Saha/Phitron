@@ -46,11 +46,5 @@ int main()
         cout<<i<<" -> "<<dis[i]<<endl;
     }
 
-    // for(Edge ed : edgeList) {
-    //     cout<<ed.u<<" -> "<<ed.v<<" : "<<ed.c<<endl;
-    // }
-
-
-
     return 0;
 }
