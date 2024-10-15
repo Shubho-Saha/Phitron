@@ -27,15 +27,20 @@ int main()
         int idx = -1;
         long long int s;
         cin >> s;
-        for (int i = 0; i < n; i++)
+        int l=0, r =n-1;
+        while(l <= r )
         {
-            if (preSum[i] >= s)
-            {
-                idx = i + 1;
-                break;
+            int midIdx = l + (r-l)/2;
+            if (preSum[midIdx] >= s) {
+                idx = midIdx;
+                r = midIdx - 1;
+            } else {
+                l = midIdx+1;
             }
         }
-        cout << idx << '\n';
+        if (idx != -1) cout<<idx+1<<'\n';
+        else cout<<idx<<'\n';
+        
     }
 
     return 0;
