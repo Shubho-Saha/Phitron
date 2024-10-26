@@ -89,7 +89,6 @@ int main()
 
     if (root->left == NULL)
     {
-        // cout << root->val << " ";
         rightOuter(root);
     }
 

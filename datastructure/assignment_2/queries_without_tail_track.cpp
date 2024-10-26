@@ -25,7 +25,6 @@ int size(Node *head) {
 }
 
 void print(Node *head) {
-    
     Node *temp = head;
     while (temp != NULL) {
         cout<<temp->val<<" ";
